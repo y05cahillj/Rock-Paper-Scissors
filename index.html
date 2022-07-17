@@ -22,8 +22,6 @@ function getComputerChoice() {
   }
 }
 
-console.log("Computer chose " + getComputerChoice())
-
 // creating console log of winner statement
 
 
@@ -46,8 +44,15 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
+let playerSelection = "rock";
+let computerSelection = getComputerChoice();
+
+// what computer chose randomly
+console.log("Computer chose: " + computerSelection)
+
+//what the user chose
+console.log("You chose: " + playerSelection)
+
 console.log(playRound(playerSelection, computerSelection));
 
 //
