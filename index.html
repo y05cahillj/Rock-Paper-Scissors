@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+  <script>
+// creating random generator for computer choice
+
+function getComputerChoice() {
+  let getComputerChoice = Math.floor(Math.random() * 3)
+  if (getComputerChoice === 0) {
+    return "rock"
+  }
+  if (getComputerChoice === 1) {
+    return "paper"
+  }
+  if (getComputerChoice === 2) {
+    return "scissors"
+  }
+}
+
+console.log("Computer chose " + getComputerChoice())
+
+// creating console log of winner statement
+
+
+function playRound(playerSelection, computerSelection) {
+  if (playerSelection === computerSelection) {
+    return ("It's a draw!");
+  } else if ((playerSelection === "rock") && (computerSelection === "scissors")) {
+    return ("You win! Rock beats scissors");
+  } else if (playerSelection === "rock" && computerSelection === "paper") {
+    return ("You lose! Paper beats rock");
+  } else if (playerSelection === "paper" && computerSelection === "rock") {
+    return ("You win! Paper beats rock");
+  } else if (playerSelection === "paper" && computerSelection === "scissors") {
+    return ("You lose! Scissors beat paper");
+  } else if (playerSelection === "scissors" && computerSelection === "paper") {
+    return ("You win! Scissors beat paper");
+  } else if (playerSelection === "scissors" && computerSelection === "rock") {
+    return ("You lose!Rock beats scissors");
+  }
+
+}
+
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+console.log(playRound(playerSelection, computerSelection));
+
+//
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
